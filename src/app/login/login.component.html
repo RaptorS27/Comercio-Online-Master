@@ -1,0 +1,18 @@
+<div style="width: 20rem; margin: auto;margin-top: 20vh; text-align: center;font-size: 3vh;font-weight: 800;">
+    <div class="mb-3">
+        <label class="form-label">Usuario</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario" id="exampleInputEmail1">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" id="exampleInputPassword1">
+    </div>
+    <button type="button" (click)="userAuth()" class="btn btn-danger">Acceder</button>
+</div>
+
+<div *ngIf="mostrar" class="alert alert-warning alert-dismissible fade show" style="display: flex;position:fixed;right:0; width: 40vh;" id="alertError" role="alert">
+    El usuario/contraseña introducido son incorrectos
+    <button type="button" class="btn-close" data-bs-dismiss="alert" (click)="mostrar=false"
+        aria-label="Close"></button>
+</div>

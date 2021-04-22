@@ -1,0 +1,35 @@
+<app-inicio></app-inicio>
+<div class="container" style="background-color: white; margin-top: 2%;min-width: 150vh;min-height: 50vh;">
+
+    <div class="row">
+        <div class="col-12" >
+            <h1 class="page-header">{{productoSeleccionado.nombre}} </h1>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 5vh;">
+        <div class="col-lg-6 mb-4">
+            <div class="">
+                <div class="main-product-image">
+                    <img src="../../assets/{{productoSeleccionado.imagen}}" class="img-fluid" style="max-width: 50vh;min-height: 35vh;max-height: 70vh;">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="form-group row">
+                <label class="col-sm-3 col-md-3 form-control-label">Descripcion:</label>
+                <div class="col-sm-8 col-md-9 description">
+                    <p>{{productoSeleccionado.descripcion}}</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-md-3 form-control-label">Precio:</label>
+                <div class="col-sm-8 col-md-9 description">
+                    <p>{{productoSeleccionado.precio}}€</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

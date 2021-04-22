@@ -1,0 +1,15 @@
+.productosPrincipal{
+    margin: auto;
+}
+.card-img-top{
+    width: 40vh;
+    height: 20vh;
+}
+.card-group{
+    margin-top: 3%;
+    position: relative;
+    display: inline-block;
+}
+.card{
+ margin: 2vh;
+}

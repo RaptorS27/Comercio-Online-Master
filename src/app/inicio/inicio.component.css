@@ -1,0 +1,11 @@
+#itemCategoria{
+    cursor: pointer;
+}
+
+#itemCategoria:hover a{
+   color: orange
+}
+.dropdown{
+    list-style: none;
+    
+}

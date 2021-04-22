@@ -1,0 +1,124 @@
+[
+	{
+		"nombre": "Categoria 1",
+		"id": 1,
+		"productos": [
+			{
+				"nombre": "producto 1",
+				"id": 1,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 2",
+				"id": 2,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 3",
+				"id": 3,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 4",
+				"id": 4,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 5",
+				"id": 5,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			}
+		]
+	},
+	{
+		"nombre": "Categoria 2",
+		"id": 2,
+		"productos": [
+			{
+				"nombre": "producto 6",
+				"id": 6,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 7",
+				"id": 7,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 8",
+				"id": 8,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			}
+		]
+	},
+	{
+		"nombre": "Categoria 3",
+		"id": 3,
+		"productos": [
+			{
+				"nombre": "producto 9",
+				"id": 9,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 10",
+				"id": 10,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 11",
+				"id": 11,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			}
+		]
+	},
+	{
+		"nombre": "Categoria 4",
+		"id": 4,
+		"productos": [
+			{
+				"nombre": "producto 12",
+				"id": 12,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 13",
+				"id": 13,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 14",
+				"id": 14,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			}
+		]
+	}
+]
