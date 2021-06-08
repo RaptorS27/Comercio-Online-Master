@@ -64,7 +64,7 @@ export class ProductosComponent implements OnInit {
   }
   addProducto(idProducto:any){
     this.CarritoService.addProduct(idProducto);
-    alert("El producto se ha añadido correctamente");
+    alert("El producto se ha añadido correctamentes");
   }
 
 
