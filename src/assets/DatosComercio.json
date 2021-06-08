@@ -120,5 +120,32 @@
 				"descripcion": "Esta es la descripcion del producto"
 			}
 		]
+	},
+  {
+		"nombre": "Categoria 5",
+		"id": 4,
+		"productos": [
+			{
+				"nombre": "producto 15",
+				"id": 13,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 16",
+				"id": 14,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			},
+			{
+				"nombre": "producto 17",
+				"id": 15,
+				"imagen": "producto1.png",
+				"precio": 32.56,
+				"descripcion": "Esta es la descripcion del producto"
+			}
+		]
 	}
 ]
