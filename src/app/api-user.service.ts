@@ -9,7 +9,7 @@ export class ApiUserService {
   constructor(private http: HttpClient) { }
 
   authUsers(user:string,passwd:string){
-    if (user && passwd){
+    if (user == 'admin' && passwd == 'admin'){
       return true;
     }else{return false}
   }

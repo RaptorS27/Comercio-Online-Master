@@ -4,6 +4,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ProducAmpliadoComponent } from './produc-ampliado/produc-ampliado.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'producto-ampliado',
     component: ProducAmpliadoComponent
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent
   }
 ];
 

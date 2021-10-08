@@ -16,7 +16,7 @@
         </li>
       </ul>
       <ul class="navbar-nav"
-        style="width:auto;margin-left: 50%;background-color:dimgray;border-radius: 10px;color:black">
+        style="margin-left: auto;background-color:dimgray;border-radius: 10px;color:black">
         <li class="nav-item carro" id="itemCategoria">
           <a class="nav-link active" aria-current="page" (click)="verCarro()">Carrito🛒<span
               style="color:red;font-weight: 500">{{carrito.length}}</span></a>
@@ -32,7 +32,10 @@
         </div>
         <div class="divTotal">
           <ul>
-            <li><a>Total: {{precioTotal}} €</a></li>
+            <li>
+              <a>Total: {{precioTotal}} €</a>
+              <a class="btn btn-danger" routerLink="/checkout" style="float: right;">Comprar</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -42,7 +45,7 @@
 
 <div class="productosPrincipal">
   <h1>Productos Destacados</h1>
-  <div class="card-group" *ngFor="let productos of prodDestacados">
+  <div class="card-group carro" *ngFor="let productos of prodDestacados">
     <div class="card">
       <span>DESTACADO</span>
       <img src="../../assets/{{productos.imagen}}" class="card-img-top">

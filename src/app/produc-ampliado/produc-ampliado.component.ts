@@ -21,7 +21,13 @@ export class ProducAmpliadoComponent implements OnInit {
     this.getDatos();
   }
 
+  limpiarCuadro() {
+    let div = document.querySelectorAll('.productosPrincipal');
+    div[0].innerHTML = '';
+  }
+
   getDatos() {
+    this.limpiarCuadro();
     this.ProductosService.getDatos().subscribe((respuesta) => {
       this.produc = respuesta;
       for (let i = 0; i < this.produc.length; i++) {

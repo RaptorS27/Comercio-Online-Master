@@ -1,1 +1,6 @@
-<p>checkout works!</p>
+<app-inicio></app-inicio>
+<a class="btn btn-danger" routerLink="/inicio" style="float: left;">Volver</a>
+<a class="btn btn-danger" routerLink="/checkout" style="float: right;">Continuar</a>
+<div *ngIf="!carroVacio" class="divVacioCarro">
+  <h1>El carro de la compra esta vacio</h1>
+</div>
