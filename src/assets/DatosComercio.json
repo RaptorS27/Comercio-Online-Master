@@ -26,7 +26,7 @@
 				"imagen": "producto1.png",
 				"precio": 32.56,
 				"descripcion": "Esta es la descripcion del producto",
-        "destacado": true
+        "destacado": false
 			},
 			{
 				"nombre": "producto 4",
@@ -42,7 +42,7 @@
 				"imagen": "producto1.png",
 				"precio": 32.56,
 				"descripcion": "Esta es la descripcion del producto",
-        "destacado": true
+        "destacado": false
 			}
 		]
 	},
@@ -56,7 +56,7 @@
 				"imagen": "producto1.png",
 				"precio": 32.56,
 				"descripcion": "Esta es la descripcion del producto",
-        "destacado": true
+        "destacado": false
 			},
 			{
 				"nombre": "producto 7",
@@ -86,7 +86,7 @@
 				"imagen": "producto1.png",
 				"precio": 32.56,
 				"descripcion": "Esta es la descripcion del producto",
-        "destacado": true
+        "destacado": false
 			},
 			{
 				"nombre": "producto 10",
@@ -116,7 +116,7 @@
 				"imagen": "producto1.png",
 				"precio": 32.56,
 				"descripcion": "Esta es la descripcion del producto",
-        "destacado": true
+        "destacado": false
 			},
 			{
 				"nombre": "producto 13",

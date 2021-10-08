@@ -64,7 +64,6 @@ export class InicioComponent implements OnInit {
     this.CarritoService.getCarrito().subscribe((res) => {
       if (res) {
         this.carrito = res;
-
       }
     });
     this.productosCarro();

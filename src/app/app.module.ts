@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProducAmpliadoComponent } from './produc-ampliado/produc-ampliado.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProducAmpliadoComponent } from './produc-ampliado/produc-ampliado.compo
     LoginComponent,
     InicioComponent,
     ProducAmpliadoComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

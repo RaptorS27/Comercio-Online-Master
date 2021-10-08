@@ -1,18 +1,51 @@
-#itemCategoria{
-    cursor: pointer;
+#itemCategoria {
+  cursor: pointer;
 }
 
-#itemCategoria:hover a{
-   color: orange
+#itemCategoria:hover a {
+  color: orange
 }
-.dropdown{
-    list-style: none;
+
+.dropdown {
+  list-style: none;
+}
+.dropdown-item{
+  border-left: 2px solid black;
 
 }
 
-.productosPrincipal h1{
+
+.itemsCarro {
+  overflow: auto;
+  max-height: 40vh;
+}
+
+.divTotal {
+  padding: 5px;
+  background-color: rgb(226, 225, 225);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.divTotal li {
+  list-style: none;
+}
+
+.productosPrincipal h1 {
   color: rgb(91, 90, 90);
   font-weight: bold;
   font-size: 3.5rem;
   text-align: center;
+}
+
+.divCarro {
+  background-color: rgb(240, 240, 240);
+  min-width: 60vh;
+  min-height: 50vh;
+  max-height: 60vh;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  padding: 2vh;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

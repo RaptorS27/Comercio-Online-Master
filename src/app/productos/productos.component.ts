@@ -17,7 +17,7 @@ export class ProductosComponent implements OnInit {
   prductosDestacados: any[] = [];
   carrito: any = '';
 
-  constructor(private CarritoService: CarritoService,private router: Router, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService) {
+  constructor(private CarritoService: CarritoService, private router: Router, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService) {
     this.ServicioCategoria.getCategoria().subscribe((respuesta) => {
       if (respuesta.cate) {
         this.catego = respuesta.cate;
@@ -26,25 +26,31 @@ export class ProductosComponent implements OnInit {
         this.catego = localStorage.getItem('catego');
       }
     })
-    this.CarritoService.getCarrito().subscribe((res)=>{
-      if (res){
+    this.CarritoService.getCarrito().subscribe((res) => {
+      if (res) {
         this.carrito = res;
       }
     });
   }
 
   ngOnInit(): void {
-    this.getDatos();
+  }
+
+  limpiarCuadro() {
+    let div = document.querySelectorAll('.productosPrincipal');
+    div[0].innerHTML = '';
   }
 
   getDatos() {
+    console.log('Obteniendo datos');
     this.ProductosApi.getDatos().subscribe((res) => {
-      this.productos = res;
-      this.seleccinarProductos();
-    });
+        this.productos = res;
+        this.seleccinarProductos();
+      });
   }
 
   seleccinarProductos() {
+    this.limpiarCuadro();
     this.productosCatego = [];
     if (this.catego != undefined) {
       for (let i = 0; i < this.productos.length; i++) {
@@ -62,7 +68,7 @@ export class ProductosComponent implements OnInit {
   verProducto(idPro: any) {
     this.router.navigate(['/producto-ampliado'], { queryParams: { producto: idPro } });
   }
-  addProducto(idProducto:any){
+  addProducto(idProducto: any) {
     this.CarritoService.addProduct(idProducto);
     alert("El producto se ha añadido correctamentes");
   }
