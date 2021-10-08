@@ -8,35 +8,41 @@
 				"id": 1,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 2",
 				"id": 2,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
+
 			},
 			{
 				"nombre": "producto 3",
 				"id": 3,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 4",
 				"id": 4,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			},
 			{
 				"nombre": "producto 5",
 				"id": 5,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			}
 		]
 	},
@@ -49,21 +55,24 @@
 				"id": 6,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 7",
 				"id": 7,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			},
 			{
 				"nombre": "producto 8",
 				"id": 8,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			}
 		]
 	},
@@ -76,21 +85,24 @@
 				"id": 9,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 10",
 				"id": 10,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 11",
 				"id": 11,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			}
 		]
 	},
@@ -103,21 +115,24 @@
 				"id": 12,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 13",
 				"id": 13,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			},
 			{
 				"nombre": "producto 14",
 				"id": 14,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			}
 		]
 	},
@@ -130,21 +145,24 @@
 				"id": 13,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			},
 			{
 				"nombre": "producto 16",
 				"id": 14,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": false
 			},
 			{
 				"nombre": "producto 17",
 				"id": 15,
 				"imagen": "producto1.png",
 				"precio": 32.56,
-				"descripcion": "Esta es la descripcion del producto"
+				"descripcion": "Esta es la descripcion del producto",
+        "destacado": true
 			}
 		]
 	}

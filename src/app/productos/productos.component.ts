@@ -14,6 +14,7 @@ export class ProductosComponent implements OnInit {
   catego: any = '';
   productos: any = '';
   productosCatego: any[] = [];
+  prductosDestacados: any[] = [];
   carrito: any = '';
 
   constructor(private CarritoService: CarritoService,private router: Router, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService) {
@@ -38,7 +39,6 @@ export class ProductosComponent implements OnInit {
 
   getDatos() {
     this.ProductosApi.getDatos().subscribe((res) => {
-      this.productos = [];
       this.productos = res;
       this.seleccinarProductos();
     });

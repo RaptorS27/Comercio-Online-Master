@@ -5,12 +5,25 @@ import { HttpClient, JsonpClientBackend } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductosApiService {
-  
+  productos: any = '';
+  prductosDestacados: any = '';
+
   constructor(private http: HttpClient) { }
 
   getDatos(){
-    return this.http.get('../assets/DatosComercio.json');
+    return this.productos = this.http.get('../assets/DatosComercio.json');
   }
 
-  
+  getDestacados(){
+    if (this.prductosDestacados.length == 0){
+      this.productos.forEach((producto:any) => {
+        if (producto.destacado){
+          this.prductosDestacados.push(producto);
+        }
+      });
+    }
+    return this.prductosDestacados;
+}
+
+
 }

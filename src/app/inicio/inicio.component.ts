@@ -16,6 +16,7 @@ export class InicioComponent implements OnInit {
   mostrarCarro: boolean = false;
   prodCarro: any = [];
   precioTotal: any = 0;
+  prodDestacados: any[] = [];
 
   constructor(private CarritoService: CarritoService, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService, private router: Router) {
     this.CarritoService.getCarrito().subscribe((res) => {
@@ -32,9 +33,22 @@ export class InicioComponent implements OnInit {
   getDatos() {
     this.ProductosApi.getDatos().subscribe((res) => {
       this.categorias = res;
+      console.log(this.categorias);
+      this.getDestacados();
     });
   }
 
+  getDestacados(){
+    if (this.prodDestacados.length == 0){
+      this.categorias.forEach((producto:any) => {
+            for (let x = 0; x < producto.productos.length; x++) {
+              if (producto.productos[x].destacado){
+                this.prodDestacados.push(producto.productos[x]);
+              }
+            }
+      });
+    }
+  }
   goCategoria(idCategoria: any) {
     console.log("Cambiando categoria" + idCategoria);
     this.ServicioCategoria.guardarCategoria(idCategoria);
@@ -70,7 +84,17 @@ export class InicioComponent implements OnInit {
     console.log(this.prodCarro);
     this.precioTotal = 0;
     for (let i = 0; i < this.prodCarro.length; i++) {
-      this.precioTotal = this.precioTotal + parseInt(this.prodCarro[i].precio); 
+      this.precioTotal = this.precioTotal + parseInt(this.prodCarro[i].precio);
     }
   }
+
+  verProducto(idPro: any) {
+    console.log(idPro);
+    this.router.navigate(['/producto-ampliado'], { queryParams: { producto: idPro } });
+  }
+  addProducto(idProducto:any){
+    this.CarritoService.addProduct(idProducto);
+    alert("El producto se ha añadido correctamente");
+  }
+
 }

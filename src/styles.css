@@ -1,7 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
-    background-image: url(assets/fonfo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  background-color: beige;
+}
+
+.productosPrincipal {
+  margin: auto;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 40vh;
+  height: 20vh;
+}
+
+.card-group {
+  margin-top: 3%;
+  position: relative;
+  display: inline-block;
+}
+.card-body{
+  text-align: left;
+}
+.card {
+  margin: 2vh;
 }
