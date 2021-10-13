@@ -73,7 +73,7 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  setCarroVacio(){
+  setCarroVacio() {
     let carritoNew: any = [];
     this.CarritoService.setCarrito(carritoNew);
     this.carrito = [];

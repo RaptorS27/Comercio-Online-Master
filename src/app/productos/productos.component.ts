@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { CategoriaSeleccionadaService } from '../categoria-seleccionada.service';
 import { ProductosApiService } from '../productos-api.service';
 import { CarritoService } from '../carrito.service';
@@ -9,42 +9,53 @@ import { CarritoService } from '../carrito.service';
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
-export class ProductosComponent implements OnInit {
+export class ProductosComponent implements AfterViewInit {
   categoria: any = '';
   catego: any = '';
   productos: any = '';
   productosCatego: any[] = [];
   prductosDestacados: any[] = [];
   carrito: any = '';
+  // @ViewChild('prodDesta') producPrincipal: ElementRef;
+
 
   constructor(private CarritoService: CarritoService, private router: Router, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService) {
-    this.ServicioCategoria.getCategoria().subscribe((respuesta) => {
-      if (respuesta.cate) {
-        this.catego = respuesta.cate;
-        this.seleccinarProductos();
-      } else {
-        this.catego = localStorage.getItem('catego');
-      }
-    })
-    this.CarritoService.getCarrito().subscribe((res) => {
-      if (res) {
-        this.carrito = res;
-      }
-    });
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
+    console.log('Antes datos');
+
     this.ProductosApi.getDatos().subscribe((res) => {
       this.productos = res;
+      console.log('Antes categoria');
+
+      this.ServicioCategoria.getCategoria().subscribe((respuesta) => {
+        console.log('Dentro categoria');
+
+        if (respuesta.cate) {
+          this.catego = respuesta.cate;
+          this.seleccinarProductos();
+        } else {
+          this.catego = localStorage.getItem('catego');
+        }
+      });
+
+      this.CarritoService.getCarrito().subscribe((res) => {
+        if (res) {
+          this.carrito = res;
+        }
+      });
     });
   }
 
   limpiarCuadro() {
+    // console.log(this.producPrincipal.nativeElement);
     let div = document.querySelectorAll('.productosPrincipal');
     div[0].innerHTML = '';
   }
 
   seleccinarProductos() {
+    console.log('SeleccionarProductos');
     this.limpiarCuadro();
     this.productosCatego = [];
     console.log('Cargando Productos');
