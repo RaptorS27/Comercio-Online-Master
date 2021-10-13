@@ -37,7 +37,6 @@ export class ProducAmpliadoComponent implements OnInit {
           }
         }
       }
-      console.log(this.productoSeleccionado);
     });
 
   }

@@ -16,24 +16,21 @@ export class ProductosComponent implements AfterViewInit {
   productosCatego: any[] = [];
   prductosDestacados: any[] = [];
   carrito: any = '';
-  // @ViewChild('prodDesta') producPrincipal: ElementRef;
 
 
   constructor(private CarritoService: CarritoService, private router: Router, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService) {
   }
 
+  ngOnInit() {
+  }
   ngAfterViewInit() {
-    console.log('Antes datos');
-
+    console.log(this.ServicioCategoria.getRefDiv().nativeElement);
     this.ProductosApi.getDatos().subscribe((res) => {
       this.productos = res;
-      console.log('Antes categoria');
-
       this.ServicioCategoria.getCategoria().subscribe((respuesta) => {
-        console.log('Dentro categoria');
-
         if (respuesta.cate) {
           this.catego = respuesta.cate;
+          this.ServicioCategoria.getRefDiv().nativeElement.remove();
           this.seleccinarProductos();
         } else {
           this.catego = localStorage.getItem('catego');
@@ -48,17 +45,8 @@ export class ProductosComponent implements AfterViewInit {
     });
   }
 
-  limpiarCuadro() {
-    // console.log(this.producPrincipal.nativeElement);
-    let div = document.querySelectorAll('.productosPrincipal');
-    div[0].innerHTML = '';
-  }
-
   seleccinarProductos() {
-    console.log('SeleccionarProductos');
-    this.limpiarCuadro();
     this.productosCatego = [];
-    console.log('Cargando Productos');
     if (this.catego != undefined) {
       for (let i = 0; i < this.productos.length; i++) {
         if (this.productos[i].id == this.catego) {
@@ -71,7 +59,6 @@ export class ProductosComponent implements AfterViewInit {
     } else {
       this.router.navigate(['/inicio']);
     }
-    console.log(this.productosCatego);
   }
   verProducto(idPro: any) {
     this.router.navigate(['/producto-ampliado'], { queryParams: { producto: idPro } });

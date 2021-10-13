@@ -23,6 +23,9 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+  ngAfterViewInit() {
     this.ProductosApi.getDatos().subscribe((res) => {
       this.categorias = res;
     });
@@ -30,13 +33,10 @@ export class MenuComponent implements OnInit {
 
   getCarro() {
     this.CarritoService.getCarrito().subscribe((res) => {
-      console.log('Actualizando carrito');
-      console.log(res);
       this.carrito = res;
     });
   }
   goCategoria(idCategoria: any) {
-    console.log("Cambiando categoria" + idCategoria);
     this.ServicioCategoria.guardarCategoria(idCategoria);
     this.router.navigate(['/productos']);
     this.mostrarCarro = false;
@@ -66,7 +66,6 @@ export class MenuComponent implements OnInit {
         }
       }
     }
-    console.log(this.prodCarro);
     this.precioTotal = 0;
     for (let i = 0; i < this.prodCarro.length; i++) {
       this.precioTotal = this.precioTotal + parseInt(this.prodCarro[i].precio);

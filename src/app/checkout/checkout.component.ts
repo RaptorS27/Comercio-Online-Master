@@ -19,6 +19,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+  ngAfterViewInit() {
     this.limpiarCuadro();
     this.carrito = this.CarritoService.getCarrito2();
     if (this.carrito.length != 0) {
@@ -30,7 +33,6 @@ export class CheckoutComponent implements OnInit {
       this.productos = res;
       this.getProdsCarro();
     });
-
   }
   limpiarCuadro() {
     let div = document.querySelectorAll('.productosPrincipal');
@@ -47,7 +49,6 @@ export class CheckoutComponent implements OnInit {
         }
       })
     });
-    console.log(this.carroProds);
     for (let i = 0; i < this.carroProds.length; i++) {
       this.precioTotal = this.precioTotal + parseInt(this.carroProds[i].precio);
     }

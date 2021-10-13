@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ViewChild, ElementRef,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductosApiService } from '../productos-api.service';
 import { CategoriaSeleccionadaService } from '../categoria-seleccionada.service';
@@ -14,11 +14,16 @@ export class InicioComponent implements OnInit {
   categorias: any;
   carrito: any[] = [];
   prodDestacados: any[] = [];
+  @ViewChild('prodDesta') divProd: ElementRef;
 
-  constructor(private CarritoService: CarritoService,private ProductosApi: ProductosApiService, private router: Router) {
+
+  constructor(private CarritoService: CarritoService, private ProductosApi: ProductosApiService,private ServicioCategoria: CategoriaSeleccionadaService, private router: Router) {
   }
 
   ngOnInit(): void {
+  }
+  ngAfterViewInit() {
+    this.ServicioCategoria.setRefDiv(this.divProd);
     this.ProductosApi.getDatos().subscribe((res) => {
       this.categorias = res;
       this.getDestacados();
@@ -37,7 +42,6 @@ export class InicioComponent implements OnInit {
   }
 
   verProducto(idPro: any) {
-    console.log(idPro);
     this.router.navigate(['/producto-ampliado'], { queryParams: { producto: idPro } });
   }
   addProducto(idProducto: any) {
