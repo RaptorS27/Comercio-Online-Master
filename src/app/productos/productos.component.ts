@@ -21,7 +21,7 @@ export class ProductosComponent implements OnInit {
     this.ServicioCategoria.getCategoria().subscribe((respuesta) => {
       if (respuesta.cate) {
         this.catego = respuesta.cate;
-        this.getDatos();
+        this.seleccinarProductos();
       } else {
         this.catego = localStorage.getItem('catego');
       }
@@ -34,6 +34,9 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.ProductosApi.getDatos().subscribe((res) => {
+      this.productos = res;
+    });
   }
 
   limpiarCuadro() {
@@ -41,17 +44,10 @@ export class ProductosComponent implements OnInit {
     div[0].innerHTML = '';
   }
 
-  getDatos() {
-    console.log('Obteniendo datos');
-    this.ProductosApi.getDatos().subscribe((res) => {
-        this.productos = res;
-        this.seleccinarProductos();
-      });
-  }
-
   seleccinarProductos() {
     this.limpiarCuadro();
     this.productosCatego = [];
+    console.log('Cargando Productos');
     if (this.catego != undefined) {
       for (let i = 0; i < this.productos.length; i++) {
         if (this.productos[i].id == this.catego) {
@@ -70,7 +66,6 @@ export class ProductosComponent implements OnInit {
   }
   addProducto(idProducto: any) {
     this.CarritoService.addProduct(idProducto);
-    alert("El producto se ha añadido correctamentes");
   }
 
 

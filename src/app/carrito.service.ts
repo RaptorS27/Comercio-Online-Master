@@ -10,7 +10,7 @@ export class CarritoService {
 
   private carrito$ = new Subject<string[]>();
   carrito: any[] = [];
-  constructor() {};
+  constructor() { };
 
 
   addProduct(idProducto: string) {
@@ -19,6 +19,9 @@ export class CarritoService {
   }
 
   getCarrito(): Observable<any> {
-      return this.carrito$.asObservable();
-    }
+    return this.carrito$.asObservable();
+  }
+  getCarrito2() {
+    return this.carrito;
+  }
 }

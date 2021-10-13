@@ -1,4 +1,27 @@
-.divVacioCarro{
+.divVacioCarro {
   margin-top: 40px;
   text-align: center;
+}
+
+table.tableChecks {
+  float: left;
+  text-align: center;
+  margin-top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+}
+
+td, th {
+  padding: 2rem;
+  background-color: aliceblue;
+}
+
+.imagenChekout {
+  margin: 10px;
+  width: 100px;
+  height: 80px;
+}
+
+.divTable h2 {
+  float: left;
 }

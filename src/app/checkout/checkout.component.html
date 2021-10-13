@@ -1,6 +1,21 @@
 <app-inicio></app-inicio>
 <a class="btn btn-danger" routerLink="/inicio" style="float: left;">Volver</a>
-<a class="btn btn-danger" routerLink="/checkout" style="float: right;">Continuar</a>
-<div *ngIf="!carroVacio" class="divVacioCarro">
+<a *ngIf="!carroVacio" class="btn btn-danger" routerLink="/checkout" style="float: right;">Continuar</a>
+<div *ngIf="carroVacio" class="divVacioCarro">
   <h1>El carro de la compra esta vacio</h1>
+</div>
+
+<div class="divTable" *ngIf="!carroVacio">
+  <table class="tableChecks">
+    <tr *ngFor="let productos of carroProds">
+      <img src="../../assets/{{productos.imagen}}" class="imagenChekout">
+      <td>{{productos.nombre}}</td>
+      <td>{{productos.precio}}</td>
+      <td>{{productos.descripcion}}</td>
+    </tr>
+    <tr style="background-color: rgb(255, 255, 255);border-top: 1px solid black;">
+      <td colspan="10">Total: {{precioTotal}}€</td>
+    </tr>
+  </table>
+
 </div>

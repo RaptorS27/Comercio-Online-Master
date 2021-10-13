@@ -1,0 +1,41 @@
+<nav *ngIf="mostrarMenu" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Comercio Electronico</a>
+    <div class="navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item" id="itemCategoria">
+          <a class="nav-link active" aria-current="page" (click)="goInicio()">Inicio</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav" *ngFor="let items of categorias">
+        <li class="nav-item" id="itemCategoria">
+          <a class="nav-link active" aria-current="page" (click)="goCategoria(items.id)">{{items.nombre}}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav"
+        style="margin-left: auto;background-color:dimgray;border-radius: 10px;color:black">
+        <li class="nav-item carro" id="itemCategoria">
+          <a class="nav-link active" aria-current="page" (click)="verCarro()">Carrito🛒<span
+              style="color:red;font-weight: 500">{{carrito.length}}</span></a>
+        </li>
+
+      </ul>
+      <div class="divCarro" *ngIf="mostrarCarro">
+        <h2>Productos</h2>
+        <div class="itemsCarro">
+          <ul class="dropdown carro" *ngFor="let item of prodCarro">
+            <li><a class="dropdown-item">{{item.nombre}} - {{item.precio}}€ </a></li>
+          </ul>
+        </div>
+        <div class="divTotal">
+          <ul>
+            <li>
+              <a>Total: {{precioTotal}} €</a>
+              <a class="btn btn-danger" routerLink="/checkout" style="float: right;">Comprar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
