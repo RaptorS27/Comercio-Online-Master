@@ -13,16 +13,12 @@ export class InicioComponent implements OnInit {
 
   categorias: any;
   carrito: any[] = [];
-  mostrarCarro: boolean = false;
-  prodCarro: any = [];
-  precioTotal: any = 0;
   prodDestacados: any[] = [];
 
-  constructor(private CarritoService: CarritoService, private ServicioCategoria: CategoriaSeleccionadaService, private ProductosApi: ProductosApiService, private router: Router) {
+  constructor(private CarritoService: CarritoService,private ProductosApi: ProductosApiService, private router: Router) {
   }
 
   ngOnInit(): void {
-    console.log(this.router.url);
     this.ProductosApi.getDatos().subscribe((res) => {
       this.categorias = res;
       this.getDestacados();

@@ -25,3 +25,27 @@ td, th {
 .divTable h2 {
   float: left;
 }
+
+.tableDatos {
+  margin-top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+  width: 500px;
+  height: 300px;
+}
+
+.divTableDatos {
+  margin-right: 30%;
+  float: right;
+  width: 100px;
+}
+
+.tableDatos label {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.tableDatos tr input {
+  float: right;
+  margin-right: 10px;
+}

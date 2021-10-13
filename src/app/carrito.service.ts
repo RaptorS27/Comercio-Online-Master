@@ -24,4 +24,7 @@ export class CarritoService {
   getCarrito2() {
     return this.carrito;
   }
+  setCarrito(carritoNew: any[]) {
+    this.carrito = carritoNew;
+  }
 }

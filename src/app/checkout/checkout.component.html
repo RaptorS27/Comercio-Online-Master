@@ -17,5 +17,29 @@
       <td colspan="10">Total: {{precioTotal}}€</td>
     </tr>
   </table>
+</div>
 
+<div class="divTableDatos" *ngIf="!carroVacio">
+  <table class="tableDatos">
+    <tr>
+      <label>Nombre</label>
+      <input name="nombre" type="text">
+    </tr>
+    <tr>
+      <label>Apellidos</label>
+      <input name="apellidos" type="text">
+    </tr>
+    <tr>
+      <label>Correo</label>
+      <input name="correo" type="email">
+    </tr>
+    <tr>
+      <label>Direccion</label>
+      <input name="direccion" type="text">
+    </tr>
+    <tr>
+      <label>Telefono</label>
+      <input name="direccion" type="tel">
+    </tr>
+  </table>
 </div>

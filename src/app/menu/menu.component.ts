@@ -23,15 +23,8 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('Ruta ACtual: ' + this.router.url);
-    if (this.router.url == '/') {
-      this.mostrarMenu = false;
-    } else {
-      this.mostrarMenu = true;
-    }
     this.ProductosApi.getDatos().subscribe((res) => {
       this.categorias = res;
-      this.getDestacados();
     });
   }
 
@@ -42,21 +35,10 @@ export class MenuComponent implements OnInit {
       this.carrito = res;
     });
   }
-  getDestacados() {
-    if (this.prodDestacados.length == 0) {
-      this.categorias.forEach((producto: any) => {
-        for (let x = 0; x < producto.productos.length; x++) {
-          if (producto.productos[x].destacado) {
-            this.prodDestacados.push(producto.productos[x]);
-          }
-        }
-      });
-    }
-  }
   goCategoria(idCategoria: any) {
     console.log("Cambiando categoria" + idCategoria);
     this.ServicioCategoria.guardarCategoria(idCategoria);
-    this.router.navigate(['productos']);
+    this.router.navigate(['/productos']);
     this.mostrarCarro = false;
   }
 
@@ -89,6 +71,13 @@ export class MenuComponent implements OnInit {
     for (let i = 0; i < this.prodCarro.length; i++) {
       this.precioTotal = this.precioTotal + parseInt(this.prodCarro[i].precio);
     }
+  }
+
+  setCarroVacio(){
+    let carritoNew: any = [];
+    this.CarritoService.setCarrito(carritoNew);
+    this.carrito = [];
+    this.mostrarCarro = false;
   }
 
 

@@ -60,6 +60,7 @@ export class ProductosComponent implements OnInit {
     } else {
       this.router.navigate(['/inicio']);
     }
+    console.log(this.productosCatego);
   }
   verProducto(idPro: any) {
     this.router.navigate(['/producto-ampliado'], { queryParams: { producto: idPro } });

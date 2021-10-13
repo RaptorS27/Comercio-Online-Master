@@ -37,7 +37,6 @@ export class CheckoutComponent implements OnInit {
     div[0].innerHTML = '';
   }
 
-
   getProdsCarro() {
     this.carrito.forEach((prod: any) => {
       this.productos.forEach((producto: any) => {

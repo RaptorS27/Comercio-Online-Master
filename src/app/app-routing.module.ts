@@ -12,10 +12,6 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
     path: 'inicio',
     component: InicioComponent
   },
