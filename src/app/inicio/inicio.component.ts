@@ -1,4 +1,4 @@
-import { Component,ViewChild, ElementRef,OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductosApiService } from '../productos-api.service';
 import { CategoriaSeleccionadaService } from '../categoria-seleccionada.service';
@@ -17,7 +17,7 @@ export class InicioComponent implements OnInit {
   @ViewChild('prodDesta') divProd: ElementRef;
 
 
-  constructor(private CarritoService: CarritoService, private ProductosApi: ProductosApiService,private ServicioCategoria: CategoriaSeleccionadaService, private router: Router) {
+  constructor(private CarritoService: CarritoService, private ProductosApi: ProductosApiService, private ServicioCategoria: CategoriaSeleccionadaService, private router: Router) {
   }
 
   ngOnInit(): void {

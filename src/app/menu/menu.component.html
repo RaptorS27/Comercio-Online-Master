@@ -12,11 +12,14 @@
           <a class="nav-link active" aria-current="page" (click)="goCategoria(items.id)">{{items.nombre}}</a>
         </li>
       </ul>
-      <ul class="navbar-nav"
-        style="margin-left: auto;background-color:dimgray;border-radius: 10px;color:black">
+      <ul class="navbar-nav" style="margin-left: auto;background-color:dimgray;border-radius: 10px;color:black">
         <li class="nav-item carro" id="itemCategoria">
-          <a class="nav-link active" aria-current="page" (click)="verCarro()">Carrito🛒<span
-              style="color:red;font-weight: 500">{{carrito.length}}</span></a>
+          <!-- <a class="nav-link active" aria-current="page" (click)="verCarro()">Carrito🛒 -->
+          <!-- <span style="color:red;font-weight: 500">{{carrito.length}}</span></a> -->
+          <!-- <mat-icon matBadge="{{carrito.length}}" matBadgeColor="warn"></mat-icon></a> -->
+          <button (click)="verCarro()" mat-raised-button color="primary" matBadge="{{carrito.length}}" matBadgePosition="after" matBadgeColor="accent">
+            Carrito🛒
+          </button>
         </li>
 
       </ul>
@@ -31,8 +34,9 @@
           <ul>
             <li>
               <a>Total: {{precioTotal}} €</a>
-              <a class="btn btn-danger" routerLink="/checkout" style="float: right;">Comprar</a>
-              <a class="btn btn-warning" (click)="setCarroVacio()"  style="float: left;">Vaciar</a>
+
+              <a mat-raised-button color="primary" routerLink="/checkout" style="float: right;">Comprar</a>
+              <a mat-raised-button color="warn" (click)="setCarroVacio()" style="float: left;">Vaciar</a>
             </li>
           </ul>
         </div>

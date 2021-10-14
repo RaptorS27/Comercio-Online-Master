@@ -68,7 +68,7 @@ export class MenuComponent implements OnInit {
     }
     this.precioTotal = 0;
     for (let i = 0; i < this.prodCarro.length; i++) {
-      this.precioTotal = this.precioTotal + parseInt(this.prodCarro[i].precio);
+      this.precioTotal = this.precioTotal + parseFloat(this.prodCarro[i].precio);
     }
   }
 

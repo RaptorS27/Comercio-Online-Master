@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../carrito.service';
 import { ProductosApiService } from '../productos-api.service';
+import { CategoriaSeleccionadaService } from '../categoria-seleccionada.service';
+
 
 
 @Component({
@@ -15,14 +17,14 @@ export class CheckoutComponent implements OnInit {
   productos: any;
   precioTotal: any = 0;
 
-  constructor(private CarritoService: CarritoService, private ProductosApi: ProductosApiService) {
+  constructor(private ServicioCategoria: CategoriaSeleccionadaService,private CarritoService: CarritoService, private ProductosApi: ProductosApiService) {
   }
 
   ngOnInit(): void {
 
   }
   ngAfterViewInit() {
-    this.limpiarCuadro();
+    // this.limpiarCuadro();
     this.carrito = this.CarritoService.getCarrito2();
     if (this.carrito.length != 0) {
       this.carroVacio = false;
@@ -31,6 +33,7 @@ export class CheckoutComponent implements OnInit {
     }
     this.ProductosApi.getDatos().subscribe((res) => {
       this.productos = res;
+      this.ServicioCategoria.getRefDiv().nativeElement.remove();
       this.getProdsCarro();
     });
   }
@@ -50,7 +53,7 @@ export class CheckoutComponent implements OnInit {
       })
     });
     for (let i = 0; i < this.carroProds.length; i++) {
-      this.precioTotal = this.precioTotal + parseInt(this.carroProds[i].precio);
+      this.precioTotal = this.precioTotal + parseFloat(this.carroProds[i].precio);
     }
   }
 

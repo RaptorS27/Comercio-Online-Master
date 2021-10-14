@@ -27,17 +27,17 @@ td, th {
 }
 
 .tableDatos {
-  margin-top: 70px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 2rem;
-  width: 500px;
+  width: min-content;
   height: 300px;
 }
 
 .divTableDatos {
+  margin-top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
   margin-right: 30%;
   float: right;
-  width: 100px;
+  width: auto;
 }
 
 .tableDatos label {

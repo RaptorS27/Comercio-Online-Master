@@ -20,7 +20,7 @@ body {
 }
 
 .card-group {
-  margin-top: 3%;
+  margin-top: 1%;
   position: relative;
   display: inline-block;
 }
@@ -32,3 +32,6 @@ body {
 .card {
   margin: 2vh;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

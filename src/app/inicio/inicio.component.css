@@ -57,3 +57,17 @@
     font-size: 2rem;
   }
 }
+
+table {
+  width: 100%;
+}
+
+.cardProd{
+  display: inline-block;
+  width: 400px;
+  margin: 2rem;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}

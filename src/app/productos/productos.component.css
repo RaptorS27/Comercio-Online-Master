@@ -13,3 +13,8 @@
 .card{
  margin: 2vh;
 }
+.cardProd{
+  display: inline-block;
+  width: 400px;
+  margin: 2rem;
+}
